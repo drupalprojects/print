@@ -240,7 +240,7 @@ function _print_var_generator($node, $query = NULL, $message = NULL, $cid = NULL
   }
   $logo_url = preg_replace('!^' . base_path() . '!', '', $logo_url);
   $site_name = variable_get('site_name', 'Drupal');
-  $print['logo'] = $logo_url ? theme('image', array('path' => $logo_url, 'alt' => $site_name, 'attributes' => array('class' => 'print-logo', 'id' => 'logo'))) : '';
+  $print['logo'] = $logo_url ? theme('image', array('path' => $logo_url, 'alt' => $site_name, 'attributes' => array('class' => array('print-logo'), 'id' => 'logo'))) : '';
 
   switch ($print_footer_options) {
     case 0: // none
