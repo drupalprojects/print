@@ -675,7 +675,7 @@ function _print_generate_path($path, $query = NULL, $format = PRINT_HTML_FORMAT,
   $node->body = preg_replace('!\s*<div class="links">.*?</div>!sim', '', $node->body);
 
   // Delete the contextual links also
-  $node->content = preg_replace('!\s*<div class="contextual-links-wrapper">.*?</div>!sim', '', $node->content);
+  $node->body = preg_replace('!\s*<div class="contextual-links-wrapper">.*?</div>!sim', '', $node->body);
 
   // Check URL list settings
   $_print_urls = _print_url_list_enabled($node, $format);
